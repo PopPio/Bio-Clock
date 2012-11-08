@@ -13,5 +13,7 @@ public class Info_screen extends Activity {
 		setContentView(R.layout.info_activity);
 		TextView info = (TextView) findViewById(R.id.infoText);
 		info.setText(R.string.info2);
+		TextView time = (TextView) findViewById(R.id.timeText);
+		time.setText(R.string.time2);
 	}
 }
