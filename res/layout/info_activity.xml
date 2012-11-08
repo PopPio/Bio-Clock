@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
     android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
-
+
     <TextView
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:text="Large Text"
+        android:text="Time Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -32,13 +32,22 @@
         android:adjustViewBounds="true"
         android:maxHeight="200dp"
         android:src="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/seleteTimebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/infoText"
+            android:layout_alignTop="@+id/timeText"
+            android:background="@drawable/seletetimebutton"
+            android:src="@drawable/seletetimebutton" />
 
         <ImageButton
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/timeText"
             android:layout_alignLeft="@+id/infoText"
+            android:layout_alignTop="@+id/timeText"
             android:background="@drawable/backbutton"
             android:src="@drawable/backbutton" />
 
