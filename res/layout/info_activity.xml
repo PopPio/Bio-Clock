@@ -33,4 +33,13 @@
         android:maxHeight="200dp"
         android:src="@drawable/menu" />
 
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/timeText"
+            android:layout_alignLeft="@+id/infoText"
+            android:background="@drawable/backbutton"
+            android:src="@drawable/backbutton" />
+
 </RelativeLayout>
