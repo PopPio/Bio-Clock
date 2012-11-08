@@ -3,6 +3,7 @@ package com.poppio.bioclock;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +20,7 @@ public class MainActivity extends Activity {
         clockButton.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
+				Log.d("PopPio", "clockButton was clicked");
 				startActivity(new Intent(MainActivity.this, Info_screen.class));
 			}
 		});

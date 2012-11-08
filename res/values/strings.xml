@@ -4,5 +4,53 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Bio Clock</string>
+    <string name="time1">01.00-03.00</string><string name="info1">The energy is moving to your liver! The liver will start working using the energy stored in your body. This is when it helps the body eliminate waste, produce bile, and store them in the gall bladder. YOU SHOULD SLEEP and MUST NOT TAKE ANY FOOD, or else you may weaken the poor liver and you might get blood pressure, diabetes, heart disease and other scary stuffs! </string>
+    <string name="infoEx1">This is the time when a chemical called ‘melatonin’ is produced. It has an anti-aging effect, so sleep for the best result! </string>
+    <string name="noti1">null</string>
+    <string name="info2">The energy is moving to your lung! You should wake up to take fresh air. But in case you’re still sleeping, if you sleep well, it means your lung is healthy. If not, it means you’re having lung-related disease or you’re smoking :(</string>
+    <string name="infoEx2">Your skin will be better if you often wake up around this time! </string>
+    <string name="noti2">It’s the time of your lung! Wake up to take fresh air! </string>
+    <string name="info3">The energy is moving to your large intestine! This is the perfect time to excrete waste! You should take it all out before 7 am, or else your body will start absorbing waste into the system. This may create wrinkles and bad lipids. You should also exercise to create motion for the large intestine so it can better excrete waste.</string>
+    <string name="infoEx3">Train yourself to excrete at this time to keep your skin fresh and appealing! </string>
+    <string name="noti3">The large intestine is here! It’s the perfect time to poop! </string><string name="info4">The energy is moving to your stomach! This is when your stomach has the most energy! It will need food, and if you don’t take breakfast, there’s a chance you might get gastritis and even heart disease due to the lack of sufficient body nutrition. </string>
+    <string name="infoEx4">Have breakfast every morning to avoid pre-aging symptoms! </string>
+    
+    <string name="noti4">This is your stomach’s time to shine. Eat breakfast! </string>
+    <string name="info5">The energy is moving to your spleen! Your spleen will start storing energy from your breakfast. If you didn’t have breakfast, it will steal your body’s energy and you will feel weak. AVOID SLEEPING during this time or it may weaken the spleen. </string>
+    <string name="infoEx5">Talk less, eat less (Your spleen is taking out waste from your vessels and working with hemoglobin in red blood cells!) </string>
+    <string name="noti5">The spleen is here. Don’t sleep, talk less, eat less!  </string>
+    <string name="info6">The energy is moving to your heart! If your body hasn’t received any nutrition by now, the heart will have a hard time working. It’s the easiest time to have heart attack. </string>
+    <string name="infoEx6">Try to avoid stress, take a break, don’t be too excited </string>
+    <string name="noti6">This is the time to follow your heart, no, what we mean is avoid stress, take a small break! </string>
+    <string name="info7">The energy is moving to your small intestine! The small intestine will start extracting nutrition from your breakfast and turn them into energy. If you didn’t have breakfast, it will digest itself and become weaker and weaker. </string>
+    <string name="infoEx7">Do not eat anything at this time, so your small intestine can work properly. </string>
+    <string name="noti7">The small intestine is on stage! Don’t eat anything! </string>
+    <string name="info8">The energy is moving to your bladder! The waste from the small intestine will be out, and your bladder will be working hard. You should sweat, though not too much (or else your kidney may suffer from the lack of sodium!).</string>
+    <string name="infoEx8">null</string>
+    <string name="noti8">The bladder is at work! This is the best time to do some exercise and sweat!</string>
+    <string name="info9">The energy is moving to your kidney! At this time, the kidney is hard at work, so don’t exercise. Exercising at this time may initiate kidney problems, a headache, dizziness, and blurred vision. But make sure to keep yourself fresh! If you feel drowsy at this time, it means your kidney is having some problem :(</string>
+    <string name="infoEx9">null</string>
+    <string name="noti9">The kidney comes in! You should make yourself fresh and new! But don’t exercise. </string>
+    <string name="info10">The energy is moving to your pericardium! Pericardium is the membrane enclosing the heart. It will clean itself and work in a slower pace. You should rest, or else your heart will be working too hard. </string>
+    <string name="infoEx10">You can pray, mediate, or do anything to calm yourself so the pericardium can work properly. </string>
+    <string name="noti10">This is the time to pray and mediate. It will benefit your pericardium.</string>
+    <string name="info11">The energy focuses on the body temperature! This is when the body tries to keep the body temperature warm. Don’t have cold showers and stay clear of the wind. This is the only time the body will store energy. You should sleep before 21.00. </string>
+    <string name="infoEx11">null</string>
+    <string name="noti11">Keep your body temperature warm! Sleep before 21.00 if possible. </string>
+    <string name="info12">The energy is moving to your gall bladder! The gall bladder will digest fat and change them into beneficial stuffs for the body. If you do not rest at this time, the fats may appear on several spots of your body, ex. under your eyes, on your stomach. Moreover you may have shoulder-ache, stomachache, diarrhea or constipation. </string>
+    <string name="infoEx12">Drink water before going to sleep. Wear pajama that is made of cotton because it can help the gall bladder store bile for digestion. </string>
+    <string name="noti12">Your gall bladder is now at work. Drink water before going to sleep! </string>
+    
+    <string name="time2">03.00-05.00</string>
+    <string name="time3">05.00-07.00</string>
+    <string name="time4">07.00-09.00</string>
+    <string name="time5">09.00-11.00</string>
+    <string name="time6">11.00-13.00</string>
+    <string name="time7">13.00-15.00</string>
+    <string name="time8">15.00-17.00</string>
+    <string name="time9">17.00-19.00</string>
+    <string name="time10">19.00-21.00</string>
+    <string name="time11">21.00-23.00</string>
+    <string name="time12">23.00-01.00</string>
 
 </resources>
