@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
-    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
-
+    android:orientation="vertical" >
+
     <TextView
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
@@ -14,14 +15,7 @@
         android:text="Time Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/infoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeText"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:text="@string/info1" /><ImageView
+    <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,23 +26,41 @@
         android:adjustViewBounds="true"
         android:maxHeight="200dp"
         android:src="@drawable/menu" />
-
-        <ImageButton
-            android:id="@+id/seleteTimebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/infoText"
-            android:layout_alignTop="@+id/timeText"
-            android:background="@drawable/seletetimebutton"
-            android:src="@drawable/seletetimebutton" />
 
-        <ImageButton
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/infoText"
-            android:layout_alignTop="@+id/timeText"
-            android:background="@drawable/backbutton"
-            android:src="@drawable/backbutton" />
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeText"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:text="@string/info1" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/infoText"
+        android:layout_alignTop="@+id/timeText"
+        android:background="@drawable/backbutton"
+        android:src="@drawable/backbutton" />
+
+    <ImageButton
+        android:id="@+id/seleteTimebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/infoText"
+        android:layout_alignTop="@+id/timeText"
+        android:background="@drawable/seletetimebutton"
+        android:src="@drawable/seletetimebutton" />
+
+    <TextView
+        android:id="@+id/extraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/infoText"
+        android:layout_alignRight="@+id/infoText"
+        android:layout_below="@+id/infoText"
+        android:text="TextView" />
 
 </RelativeLayout>

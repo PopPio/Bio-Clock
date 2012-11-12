@@ -27,7 +27,7 @@ public class Info_screen extends Activity {
 		
 		int infoTextId = info[currentId].getDescription();
 		int timeTestId = info[currentId].getTime();
-	
+		int extraId = info[currentId].getExtra();
 		setContentView(R.layout.info_activity);
 		
 		TextView info = (TextView) findViewById(R.id.infoText);
@@ -35,6 +35,14 @@ public class Info_screen extends Activity {
 		
 		TextView time = (TextView) findViewById(R.id.timeText);
 		time.setText(timeTestId);
+		
+		TextView extra = (TextView) findViewById(R.id.extraText);
+		if(getString(extraId).equals("null")){
+			extra.setVisibility(View.GONE);
+		}else{
+			extra.setText(extraId);
+		}
+		
 		
 		ImageButton back = (ImageButton) findViewById(R.id.backButton);
 		back.setOnClickListener(new OnClickListener() {

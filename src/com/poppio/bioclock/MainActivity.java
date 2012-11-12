@@ -38,29 +38,29 @@ public class MainActivity extends Activity {
 	}
 	
 	public int computeTime(int time){
-    	if(time>23){
+    	if(time>=23){
     		return 12;
-    	}else if(time>21){
+    	}else if(time>=21){
     		return 11;
-    	}else if(time>19){
+    	}else if(time>=19){
     		return 10;
-    	}else if(time>17){
+    	}else if(time>=17){
     		return 9;
-    	}else if(time>15){
+    	}else if(time>=15){
     		return 8;
-    	}else if(time>13){
+    	}else if(time>=13){
     		return 7;
-    	}else if(time>11){
+    	}else if(time>=11){
     		return 6;
-    	}else if(time>9){
+    	}else if(time>=9){
     		return 5;
-    	}else if(time>7){
+    	}else if(time>=7){
     		return 4;
-    	}else if(time>5){
+    	}else if(time>=5){
     		return 3;
-    	}else if(time>3){
+    	}else if(time>=3){
     		return 2;
-    	}else if(time>1){
+    	}else if(time>=1){
     		return 1;
     	}else{
     		return 12;
