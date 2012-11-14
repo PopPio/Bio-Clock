@@ -62,5 +62,14 @@
         android:layout_alignRight="@+id/infoText"
         android:layout_below="@+id/infoText"
         android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/checkInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignRight="@+id/extraText"
+        android:background="@drawable/circle_base"
+        android:src="@drawable/circle_none" />
 
 </RelativeLayout>

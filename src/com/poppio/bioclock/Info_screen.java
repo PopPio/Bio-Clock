@@ -52,6 +52,16 @@ public class Info_screen extends Activity {
 				startActivity(new Intent(Info_screen.this, MainActivity.class));
 			}
 		});
+		
+		
+		final ImageButton check = (ImageButton) findViewById(R.id.checkInfo);
+		check.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Log.d("PopPio", "check was clicked");
+				check.setImageResource(R.drawable.circle_check);
+			}
+		});
 	}
 	
 	private void fetchInfo (){
