@@ -16,15 +16,17 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	private PendingIntent pendingIntent;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		notification ();
+		
+		
+		notification();
 		
 		Button clockButton = (Button) findViewById(R.id.clockButton);
 		clockButton.setOnClickListener(new OnClickListener() {
@@ -41,28 +43,34 @@ public class MainActivity extends Activity {
 				intent.putExtra("timeID", computeTime(now.hour));
 				startActivity(intent);
 				
-				
 			}
 		});
 	}
 	
-	public void notification () {
-		Intent notiIntent = new Intent(this , NotificationCenter.class);
-		AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-	    PendingIntent pendingIntent = PendingIntent.getService(this, 0, notiIntent, 0);
+	public void notification(){
+		Intent myIntent = new Intent(MainActivity.this,NotificationCenter.class);
+		
+		pendingIntent = PendingIntent.getService(MainActivity.this, 0, myIntent, 0);
 
-	    Calendar calendar = Calendar.getInstance();
-//	    calendar.set(Calendar.HOUR_OF_DAY, 00);
-//	    calendar.set(Calendar.MINUTE, 29);
-//	    calendar.set(Calendar.SECOND, 00);
-	    
-	    alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis() , pendingIntent); 
-	    Log.d("PopPio", "set notification completed");
-	    
-	    Log.d("PopPio", "calendar:"+calendar.get(Calendar.DAY_OF_MONTH)+"-"+calendar.get(Calendar.MONTH)+"--"+calendar.get(Calendar.HOUR_OF_DAY)+"-"+calendar.get(Calendar.MINUTE));
+		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+		Calendar calendar = Calendar.getInstance();
+		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+		calendar.set(Calendar.HOUR_OF_DAY, computeAlarm(hour));
+		calendar.set(Calendar.MINUTE, 00);
+		calendar.set(Calendar.SECOND, 00);
+		
+		
+//		calendar.setTimeInMillis(System.currentTimeMillis());
+//		calendar.add(Calendar.SECOND, 10);
+		alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent);
+		Log.d("PopPio", "set notificationTest completed");
+//		Toast.makeText(MainActivity.this, "Start Alarm Test", Toast.LENGTH_LONG).show();
+		
 	}
 	
-	public int computeTime(int time){
+	
+	public static int computeTime(int time){
     	if(time>=23){
     		return 12;
     	}else if(time>=21){
@@ -92,9 +100,42 @@ public class MainActivity extends Activity {
     	}
     }
 	
+	
+	public static int computeAlarm(int time){
+    	if(time>=23){
+    		return 1;
+    	}else if(time>=21){
+    		return 23;
+    	}else if(time>=19){
+    		return 21;
+    	}else if(time>=17){
+    		return 19;
+    	}else if(time>=15){
+    		return 17;
+    	}else if(time>=13){
+    		return 15;
+    	}else if(time>=11){
+    		return 13;
+    	}else if(time>=9){
+    		return 11;
+    	}else if(time>=7){
+    		return 9;
+    	}else if(time>=5){
+    		return 7;
+    	}else if(time>=3){
+    		return 5;
+    	}else if(time>=1){
+    		return 3;
+    	}else{
+    		return 1;
+    	}
+    }
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+	
+
 }

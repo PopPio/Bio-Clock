@@ -30,4 +30,7 @@ public class Information {
 	public int getTime(){
 		return this.time;
 	}
+	public int getNoti(){
+		return this.noti;
+	}
 }

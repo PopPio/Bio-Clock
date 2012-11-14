@@ -25,6 +25,7 @@
         
         <activity android:name=".Info_screen"></activity>
         
+        <service android:name=".NotificationCenter" />
     </application>
 
 </manifest>
