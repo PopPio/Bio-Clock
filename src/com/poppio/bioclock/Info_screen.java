@@ -55,11 +55,24 @@ public class Info_screen extends Activity {
 		
 		
 		final ImageButton check = (ImageButton) findViewById(R.id.checkInfo);
+		if(((GlobalVar)getApplication()).isCheck()){
+			check.setImageResource(R.drawable.circle_check);
+		}else{
+			check.setImageResource(R.drawable.circle_none);
+		}
 		check.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Log.d("PopPio", "check was clicked");
-				check.setImageResource(R.drawable.circle_check);
+				
+				if(((GlobalVar)getApplication()).isCheck()){ //already checked, so we uncheck it
+					check.setImageResource(R.drawable.circle_none);
+					((GlobalVar)getApplication()).setCheck(false);
+				}else{
+					check.setImageResource(R.drawable.circle_check);
+					((GlobalVar)getApplication()).setCheck(true);
+					
+				}
 			}
 		});
 	}
