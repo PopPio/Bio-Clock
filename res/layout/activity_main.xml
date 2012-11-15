@@ -3,15 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg1" >
+    
+     <FrameLayout
+        android:id="@+id/frameClock"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+		<ImageView
+    android:id="@+id/clockBg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:src="@drawable/clock_night" />
 
-    <Button
-        android:id="@+id/clockButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Button" />
-
+   <AnalogClock
+       android:id="@+id/analogClock"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:dial="@drawable/clock_none"
+       android:hand_hour="@drawable/hand_hour"
+       android:hand_minute="@drawable/hand_minute" />
+    </FrameLayout>
+    
+    
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
@@ -21,5 +35,7 @@
         android:adjustViewBounds="true"
         android:maxHeight="200dp"
         android:src="@drawable/menu" />
+
+     
 
 </RelativeLayout>
