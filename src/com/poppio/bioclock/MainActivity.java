@@ -24,6 +24,7 @@ import android.widget.Toast;
 //	-Alarm only notify you 1 next notification -> need to implement chain alarm
 //	-Didn't implement score view
 //	-Didn't implement setting view
+//	-No Scroll bar if texts in info screen are too long
 
 public class MainActivity extends Activity {
 	private PendingIntent pendingIntent;

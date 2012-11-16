@@ -2,6 +2,7 @@ package com.poppio.bioclock;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,15 +33,24 @@ public class Info_screen extends Activity {
 		int timeTestId = info[currentId].getTime();
 		int extraId = info[currentId].getExtra();
 		setContentView(R.layout.info_activity);
-		TextView info = (TextView) findViewById(R.id.infoText);
-		info.setText(infoTextId);
+		
+		Typeface penna = Typeface.createFromAsset(getAssets(),"fonts/penna.ttf");
+		Typeface vanilla = Typeface.createFromAsset(getAssets(),"fonts/Vanilla.ttf");
+		
 		TextView time = (TextView) findViewById(R.id.timeText);
 		time.setText(timeTestId);
+		time.setTypeface(vanilla);
+		
+		TextView info = (TextView) findViewById(R.id.infoText);
+		info.setText(infoTextId);
+		info.setTypeface(penna,Typeface.BOLD);
+		
 		TextView extra = (TextView) findViewById(R.id.extraText);
 		if(getString(extraId).equals("null")){
 			extra.setVisibility(View.GONE);
 		}else{
 			extra.setText(extraId);
+			extra.setTypeface(penna,Typeface.BOLD);
 		}
 		
 		//set back button
