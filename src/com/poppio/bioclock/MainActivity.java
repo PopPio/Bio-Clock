@@ -12,19 +12,29 @@ import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AnalogClock;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+//	Known Issue:
+//	-Clock don't change bg if you not change view -> need to implement runable
+//	-Alarm only notify you 1 next notification -> need to implement chain alarm
+//	-Didn't implement score view
+//	-Didn't implement setting view
 
 public class MainActivity extends Activity {
 	private PendingIntent pendingIntent;
 	int hour;
+	Information [] info;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		
+		//add notification , also compute other stuffs
 		notification();
 		
 //		Button clockButton = (Button) findViewById(R.id.clockButton);
@@ -45,6 +55,14 @@ public class MainActivity extends Activity {
 //			}
 //		});
 		
+	}
+	
+	
+	@Override
+	public void onStart(){
+		super.onStart();
+		
+		//Assign correct analog clock bg
 		ImageView clockBg = (ImageView) findViewById(R.id.clockBg);
 		if(hour>=18){
 			clockBg.setImageResource(R.drawable.clock_night);
@@ -54,29 +72,59 @@ public class MainActivity extends Activity {
 			clockBg.setImageResource(R.drawable.clock_night);
 		}
 		
+		//Analog clock button 
+			AnalogClock ac = (AnalogClock) findViewById(R.id.analogClock);
+			ac.setClickable(true);
+			ac.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+				Log.d("PopPio", "clockButton was clicked");
+				
+				Time now = new Time(Time.getCurrentTimezone());
+				now.setToNow();
+				Log.d("PopPio", "current Hour is " + now.hour);
+				int sendID = computeTime(now.hour);
+				Log.d("PopPio", "computed hour id is "+ sendID);
+				
+				Intent intent = new Intent(MainActivity.this, Info_screen.class);
+				intent.putExtra("timeID", computeTime(now.hour));
+				startActivity(intent);
+				
+			}
+		});
 		
-		AnalogClock ac = (AnalogClock) findViewById(R.id.analogClock);
-		ac.setClickable(true);
-		ac.setOnClickListener(new View.OnClickListener() {
-	
-			public void onClick(View v) {
-			Log.d("PopPio", "clockButton was clicked");
-			
-			Time now = new Time(Time.getCurrentTimezone());
-			now.setToNow();
-			Log.d("PopPio", "current Hour is " + now.hour);
-			int sendID = computeTime(now.hour);
-			Log.d("PopPio", "computed hour id is "+ sendID);
-			
-			Intent intent = new Intent(MainActivity.this, Info_screen.class);
-			intent.putExtra("timeID", computeTime(now.hour));
-			startActivity(intent);
-			
+		//checkbox
+		final ImageButton checkHome = (ImageButton) findViewById(R.id.checkHome);
+		if(((GlobalVar)getApplication()).isCheck()){
+			checkHome.setImageResource(R.drawable.circle_check);
+		}else{
+			checkHome.setImageResource(R.drawable.circle_none);
 		}
-	});
+		checkHome.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Log.d("PopPio", "check was clicked");
+				
+				if(((GlobalVar)getApplication()).isCheck()){ //already checked, so we uncheck it
+					checkHome.setImageResource(R.drawable.circle_none);
+					((GlobalVar)getApplication()).setCheck(false);
+				}else{
+					checkHome.setImageResource(R.drawable.circle_check);
+					((GlobalVar)getApplication()).setCheck(true);
+					
+				}
+			}
+		});
 		
+		
+		info = ((GlobalVar)getApplication()).getInfo();
+		
+		//text in box
+		TextView textHome = (TextView) findViewById(R.id.textHome);
+		textHome.setText(info[computeTime(hour)].getNoti());
 		
 	}
+	
+
 	
 	public void notification(){
 		Intent myIntent = new Intent(MainActivity.this,NotificationCenter.class);

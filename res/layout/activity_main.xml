@@ -7,7 +7,7 @@
      <FrameLayout
         android:id="@+id/frameClock"
         android:layout_width="fill_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" >
 		<ImageView
@@ -36,6 +36,31 @@
         android:maxHeight="200dp"
         android:src="@drawable/menu" />
 
-     
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameClock"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_home_bg"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:text="TextView, this is text bla bla bla bla this is random" />
+
+    <ImageButton
+        android:id="@+id/checkHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textHome"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/circle_base"
+        android:src="@drawable/circle_check" />
 
 </RelativeLayout>
