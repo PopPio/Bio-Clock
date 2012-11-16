@@ -42,5 +42,12 @@ public class GlobalVar extends Application {
 		info[10] = new Information(R.string.time10, R.string.info10, R.string.infoEx10, R.string.noti10);
 		info[11] = new Information(R.string.time11, R.string.info11, R.string.infoEx11, R.string.noti11);
 		info[12] = new Information(R.string.time12, R.string.info12, R.string.infoEx12, R.string.noti12);
+		
+		
+		for (int i = 1; i < 13; i++) {
+			if(getString(info[i].getNoti()).equalsIgnoreCase("null")){
+				info[i].setNoti(R.string.nullValue);
+			}
+		}
 	}
 }

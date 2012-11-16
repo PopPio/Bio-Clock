@@ -6,6 +6,22 @@ public class Information {
 	private int noti;
 	private int time;
 	
+	public void setDescription(int description) {
+		this.description = description;
+	}
+
+	public void setExtra(int extra) {
+		this.extra = extra;
+	}
+
+	public void setNoti(int noti) {
+		this.noti = noti;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
 	public Information (){
 		this.time = 0;
 		this.description = 0;

@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
@@ -103,6 +104,8 @@ public class MainActivity extends Activity {
 		TextView textHome = (TextView) findViewById(R.id.textHome);
 		textHome.setText(info[computeTime(hour)].getNoti());
 		
+		Typeface penna = Typeface.createFromAsset(getAssets(),"fonts/penna.ttf");
+		textHome.setTypeface(penna,Typeface.BOLD);
 	}
 	
 
