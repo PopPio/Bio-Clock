@@ -1,3 +1,5 @@
+//Bio Clock for object-oriened sunject
+
 package com.poppio.bioclock;
 
 import java.util.Calendar;
@@ -24,7 +26,10 @@ import android.widget.Toast;
 //	-Alarm only notify you 1 next notification -> need to implement chain alarm
 //	-Didn't implement score view
 //	-Didn't implement setting view
+//	-Didn't implement view info of other time
 //	-No Scroll bar if texts in info screen are too long
+//	Author by Suwichapol Jinnawong
+
 
 public class MainActivity extends Activity {
 	private PendingIntent pendingIntent;
