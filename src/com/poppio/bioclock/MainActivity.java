@@ -2,7 +2,6 @@ package com.poppio.bioclock;
 
 import java.util.Calendar;
 
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -20,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //	Known Issue:
-//	-Clock don't change bg if you not change view -> need to implement runable
+//	-Clock don't change background if you not change view -> need to implement runable
 //	-Alarm only notify you 1 next notification -> need to implement chain alarm
 //	-Didn't implement score view
 //	-Didn't implement setting view
@@ -36,24 +35,6 @@ public class MainActivity extends Activity {
 		
 		//add notification , also compute other stuffs
 		notification();
-		
-//		Button clockButton = (Button) findViewById(R.id.clockButton);
-//		clockButton.setOnClickListener(new OnClickListener() {
-//			public void onClick(View v) {
-//				Log.d("PopPio", "clockButton was clicked");
-//				
-//				Time now = new Time(Time.getCurrentTimezone());
-//				now.setToNow();
-//				Log.d("PopPio", "current Hour is " + now.hour);
-//				int sendID = computeTime(now.hour);
-//				Log.d("PopPio", "computed hour id is "+ sendID);
-//				
-//				Intent intent = new Intent(MainActivity.this, Info_screen.class);
-//				intent.putExtra("timeID", computeTime(now.hour));
-//				startActivity(intent);
-//				
-//			}
-//		});
 		
 	}
 	
@@ -135,13 +116,20 @@ public class MainActivity extends Activity {
 
 		Calendar calendar = Calendar.getInstance();
 		hour = calendar.get(Calendar.HOUR_OF_DAY);
+		
+		//---------------------Normal Alarm---------------------
+		//for normal notification
 		calendar.set(Calendar.HOUR_OF_DAY, computeAlarm(hour));
 		calendar.set(Calendar.MINUTE, 00);
 		calendar.set(Calendar.SECOND, 00);
+		//------------------------------------------------------
 		
-		
+		//---------------------Alarm Test-----------------------
+		//will fires notification 10 seconds after launch application
 //		calendar.setTimeInMillis(System.currentTimeMillis());
 //		calendar.add(Calendar.SECOND, 10);
+		//------------------------------------------------------
+		
 		alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent);
 		Log.d("PopPio", "set notificationTest completed");
 //		Toast.makeText(MainActivity.this, "Start Alarm Test", Toast.LENGTH_LONG).show();
@@ -210,11 +198,11 @@ public class MainActivity extends Activity {
     	}
     }
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
-	
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		getMenuInflater().inflate(R.menu.activity_main, menu);
+//		return true;
+//	}
+//	
 
 }
