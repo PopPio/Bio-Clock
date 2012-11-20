@@ -5,7 +5,17 @@ import android.util.Log;
 
 public class GlobalVar extends Application {
     private boolean check = false;
-    private Information [] info;
+    private boolean checkArray[] = new boolean[13];
+    public boolean[] getCheckArray() {
+		return checkArray;
+	}
+
+	public void setCheckArray(boolean[] checkArray) {
+		this.checkArray = checkArray;
+	}
+
+
+	private Information [] info;
 
     public boolean isCheck() {
             return check;

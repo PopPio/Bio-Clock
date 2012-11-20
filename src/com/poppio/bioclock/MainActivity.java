@@ -128,15 +128,15 @@ public class MainActivity extends Activity {
 		
 		//---------------------Normal Alarm---------------------
 		//for normal notification
-		calendar.set(Calendar.HOUR_OF_DAY, computeAlarm(hour));
-		calendar.set(Calendar.MINUTE, 00);
-		calendar.set(Calendar.SECOND, 00);
+//		calendar.set(Calendar.HOUR_OF_DAY, computeAlarm(hour));
+//		calendar.set(Calendar.MINUTE, 00);
+//		calendar.set(Calendar.SECOND, 00);
 		//------------------------------------------------------
 		
 		//---------------------Alarm Test-----------------------
 		//will fires notification 10 seconds after launch application
-//		calendar.setTimeInMillis(System.currentTimeMillis());
-//		calendar.add(Calendar.SECOND, 10);
+		calendar.setTimeInMillis(System.currentTimeMillis());
+		calendar.add(Calendar.SECOND, 10);
 		//------------------------------------------------------
 		
 		alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent);
