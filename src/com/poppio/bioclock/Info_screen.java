@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class Info_screen extends Activity {
@@ -24,8 +25,6 @@ public class Info_screen extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
-		
 		
 	}
 	
@@ -38,7 +37,6 @@ public class Info_screen extends Activity {
 		if (extras != null) {
 			currentId = extras.getInt("timeID");
 		}
-		
 		
 		
 		changeContent(currentId);
