@@ -24,7 +24,7 @@
         </activity>
         
         <activity android:name=".Info_screen"></activity>
-        
+        <activity android:name=".Score_screen"></activity>
         <service android:name=".NotificationCenter" />
     </application>
 

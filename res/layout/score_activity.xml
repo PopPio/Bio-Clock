@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1" >
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Score"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="26sp" />
+    
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreText"
+        android:layout_marginTop="28dp" 
+        android:layout_marginLeft="26dp">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_date8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Sep"
+                android:textSize="30sp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tableLayout1"
+        
+        android:layout_toRightOf="@+id/scoreText" >
+
+        <TextView
+            android:id="@+id/score_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:textSize="30sp" />
+
+        <TableRow
+            android:id="@+id/tableRow15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="55 points"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40 points"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/score_score3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 points"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/score_score4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 points"
+                android:textSize="30sp" />
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/score_score5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 points"
+                android:textSize="30sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/score_score6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 points"
+                android:textSize="30sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/score_score7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60 points"
+                android:textSize="30sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/score_score8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 points"
+                android:textSize="30sp" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/score_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_alignTop="@+id/scoreText"
+        android:background="@drawable/backbutton"
+        android:src="@drawable/backbutton" />
+
+</RelativeLayout>

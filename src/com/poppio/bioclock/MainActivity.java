@@ -49,6 +49,19 @@ public class MainActivity extends Activity {
 	@Override
 	public void onStart(){
 		super.onStart();
+		//score
+		ImageButton scoreButton = (ImageButton) findViewById(R.id.scoreButton);
+		scoreButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+			Log.d("PopPio", "scoreButton was clicked");
+			
+			
+			Intent intent = new Intent(MainActivity.this, Score_screen.class);
+//			intent.putExtra("timeID", computeTime(now.hour));
+			startActivity(intent);
+			
+		}
+	});
 		
 		//Assign correct analog clock bg
 		ImageView clockBg = (ImageView) findViewById(R.id.clockBg);
